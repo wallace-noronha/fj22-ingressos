@@ -25,7 +25,7 @@ public class GerenciadorDeSessaoTest {
 	
 	@Before
 	public void preparaSessoes() {
-		this.rogueOne = new Filme("rogueOne", Duration.ofMinutes(120), "SCI-FI", BigDecimal.ONE);
+		this.rogueOne = new Filme("rogueOne", Duration.ofMinutes(120), "SCI-FI",BigDecimal.ONE);
 		this.sala3D = new Sala("Sala 3D", BigDecimal.TEN);
 		
 		this.sessaoDasDez = new Sessao(LocalTime.parse("10:00:00"), rogueOne, sala3D);
