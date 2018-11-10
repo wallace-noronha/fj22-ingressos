@@ -12,8 +12,8 @@ public class SessaoTest {
 
 	@Test
 	public void oPrecoDaSessaoDeveSerIgualASomaDoPrecoDaSalaMaisOPrecoDoFilme() {
-		Sala sala = new Sala("Eldorado - Imax",new BigDecimal(22));
-		Filme filme = new Filme("RogueOne", Duration.ofMinutes(120),"SCI-FI", new BigDecimal(12));
+		Sala sala = new Sala("Eldorado - Imax",new BigDecimal("22.00"));
+		Filme filme = new Filme("RogueOne", Duration.ofMinutes(120),"SCI-FI", new BigDecimal("12.00"));
 		
 		BigDecimal somaDosPrecosDaSalaEFilme = sala.getPreco().add(filme.getPreco());
 		Sessao sessao = new Sessao(LocalTime.parse("10:00:00"), filme , sala);
