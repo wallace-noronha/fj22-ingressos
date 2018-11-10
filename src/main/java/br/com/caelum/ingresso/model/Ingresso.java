@@ -6,6 +6,7 @@ import br.com.caelum.ingresso.model.descontos.Desconto;
 
 public class Ingresso {
 
+	
 	private Sessao sessao;
 	
 	private BigDecimal preco;
