@@ -27,6 +27,9 @@ public class SalaController {
 
     @Autowired
     private SalaDao salaDao;
+    
+    @Autowired
+    private SessaoDao sessaoDao;
 
     @Autowired
     private SessaoDao sessaoDao;
@@ -77,6 +80,10 @@ public class SalaController {
         ModelAndView view = new ModelAndView("sessao/lista");
         view.addObject("sala", sala);
         view.addObject("sessoes", sessaoDao.buscaSessoesDaSala(sala));
+<<<<<<< HEAD
+=======
+        
+>>>>>>> b7034e0136a6d51477ade70c6e4966a88296e645
         return view;
     }
 

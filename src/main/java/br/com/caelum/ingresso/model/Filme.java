@@ -7,6 +7,10 @@ import java.time.Duration;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+<<<<<<< HEAD
+=======
+import javax.validation.constraints.NotNull;
+>>>>>>> b7034e0136a6d51477ade70c6e4966a88296e645
 
 /**
  * Created by nando on 03/03/17.
@@ -21,9 +25,14 @@ public class Filme {
     private Duration duracao;
     private String genero;
     private BigDecimal preco;
+<<<<<<< HEAD
     
 
 	/**
+=======
+  
+    /**
+>>>>>>> b7034e0136a6d51477ade70c6e4966a88296e645
      * @deprecated hibernate only
      */
     public Filme() {
@@ -68,16 +77,29 @@ public class Filme {
     public void setGenero(String genero) {
         this.genero = genero;
     }
+<<<<<<< HEAD
     
     public BigDecimal getPreco() {
 		return preco.setScale(2, RoundingMode.HALF_UP);
+=======
+
+	public BigDecimal getPreco() {
+		return preco.setScale(2, RoundingMode.HALF_UP);
+		//return preco;
+>>>>>>> b7034e0136a6d51477ade70c6e4966a88296e645
 	}
 
 	public void setPreco(BigDecimal preco) {
 		this.preco = preco;
 	}
+<<<<<<< HEAD
 
 	public void setDuracao(Duration duracao) {
 		this.duracao = duracao;
 	}
+=======
+    
+    
+    
+>>>>>>> b7034e0136a6d51477ade70c6e4966a88296e645
 }

@@ -31,6 +31,10 @@
 					<span class="text-danger">${error.defaultMessage}</span>
 				</c:forEach>
             </div>
+<<<<<<< HEAD
+=======
+            
+>>>>>>> b7034e0136a6d51477ade70c6e4966a88296e645
             <button type="submit" class="btn btn-primary">Gravar</button>
         </form>
         </div>
