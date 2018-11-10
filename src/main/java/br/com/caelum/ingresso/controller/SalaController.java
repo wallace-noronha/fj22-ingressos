@@ -31,9 +31,6 @@ public class SalaController {
     @Autowired
     private SessaoDao sessaoDao;
 
-    @Autowired
-    private SessaoDao sessaoDao;
-
     @GetMapping({"/admin/sala", "/admin/sala/{id}"})
     public ModelAndView form(@PathVariable("id")Optional<Integer> id, Sala sala){
         ModelAndView modelAndView = new ModelAndView("sala/sala");
@@ -80,10 +77,7 @@ public class SalaController {
         ModelAndView view = new ModelAndView("sessao/lista");
         view.addObject("sala", sala);
         view.addObject("sessoes", sessaoDao.buscaSessoesDaSala(sala));
-<<<<<<< HEAD
-=======
-        
->>>>>>> b7034e0136a6d51477ade70c6e4966a88296e645
+
         return view;
     }
 

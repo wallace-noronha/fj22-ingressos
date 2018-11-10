@@ -15,10 +15,7 @@ public class Sessao {
 	@Id
 	@GeneratedValue
 	private Integer id;
-<<<<<<< HEAD
-	
-=======
->>>>>>> b7034e0136a6d51477ade70c6e4966a88296e645
+
 	private LocalTime horario;
 	
 	@ManyToOne
@@ -26,7 +23,6 @@ public class Sessao {
 	
 	@ManyToOne
 	private Filme filme;
-<<<<<<< HEAD
 	 
 	private BigDecimal preco;
 	
@@ -48,43 +44,10 @@ public class Sessao {
 	public LocalTime getHorarioTermino(){
 		return this.horario.plusMinutes(filme.getDuracao().toMinutes());
 	}
-
-	
 	
 	//Getters and setters
-	
-	public BigDecimal getPreco() {
-		return preco.setScale(2, RoundingMode.HALF_UP);
-	}
-
-	public void setPreco(BigDecimal preco) {
-		this.preco = preco;
-	}
 
 	
-=======
-	
-	private BigDecimal preco;
-	
-	/**
-	 * @deprecated hibernate only
-	 */
-	public Sessao() {
-	}
-
-	public Sessao(LocalTime horario, Filme filme, Sala sala) {
-		this.horario = horario;
-		this.sala = sala;
-		this.filme = filme;
-		this.preco = sala.getPreco().add(filme.getPreco());
-	}
-	
-	public LocalTime getHorarioTermino() {
-		return this.horario.plusMinutes(filme.getDuracao().toMinutes());
-	}
-
-	//Getters and Setters
->>>>>>> b7034e0136a6d51477ade70c6e4966a88296e645
 	public Integer getId() {
 		return id;
 	}
@@ -116,17 +79,15 @@ public class Sessao {
 	public void setFilme(Filme filme) {
 		this.filme = filme;
 	}
-<<<<<<< HEAD
-=======
+
 
 	public BigDecimal getPreco() {
-		return preco.setScale(2, RoundingMode.HALF_UP);
+		//return preco.setScale(2, RoundingMode.HALF_UP);
+		return preco;
 	}
 
 	public void setPreco(BigDecimal preco) {
 		this.preco = preco;
 	}
-	
->>>>>>> b7034e0136a6d51477ade70c6e4966a88296e645
 	
 }

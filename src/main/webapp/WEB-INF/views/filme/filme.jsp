@@ -40,12 +40,7 @@
 		
 			<div class="form-group">
 				<label for="preco">Preço:</label>
-<<<<<<< HEAD
 				<input id="preco" type="text" name="preco" class="form-control" value="${filme.preco}">
-=======
-				<input id="preco" type="text" name="preco" class="form-control"
-						value="${filme.preco}">
->>>>>>> b7034e0136a6d51477ade70c6e4966a88296e645
 				<c:forEach items="${bindingResult.getFieldErrors('preco')}" var="error"> 
 					<span class="text-danger">${error.defaultMessage}</span>
 				</c:forEach>

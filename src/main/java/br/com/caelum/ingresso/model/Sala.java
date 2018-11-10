@@ -76,16 +76,9 @@ public class Sala {
         this.lugares = lugares;
     }
 
-<<<<<<< HEAD
-    
-    
-    public BigDecimal getPreco() {
-		return preco.setScale(2, RoundingMode.HALF_UP);
-=======
     public BigDecimal getPreco() {
     	//return preco.setScale(2, RoundingMode.HALF_UP);
     	return preco;
->>>>>>> b7034e0136a6d51477ade70c6e4966a88296e645
 	}
 
 	public void setPreco(BigDecimal preco) {

@@ -34,11 +34,9 @@ public class SessaoController {
 	
 	
 	@GetMapping("/admin/sessao")
-<<<<<<< HEAD
-	public ModelAndView form(@RequestParam("salaId") Integer salaId, SessaoForm form){
-=======
-	public ModelAndView form(@RequestParam("salaId") Integer salaId,SessaoForm form) {
->>>>>>> b7034e0136a6d51477ade70c6e4966a88296e645
+
+	public ModelAndView form(@RequestParam("salaId") Integer salaId, SessaoForm form) {
+
 		form.setSalaId(salaId);
 		
 		ModelAndView modelAndView = new ModelAndView("sessao/sessao");
@@ -50,22 +48,16 @@ public class SessaoController {
 		return modelAndView;
 	}
 	
-<<<<<<< HEAD
-	@PostMapping(value="/admin/sessao")
-	@Transactional
-	public ModelAndView salva(@Valid SessaoForm form, BindingResult result){
-		if (result.hasErrors()) return form(form.getSalaId(),form);
-=======
+
 	@PostMapping("/admin/sessao")
 	@Transactional
 	public ModelAndView salva(@Valid SessaoForm form,BindingResult result) {
 		if(result.hasErrors()) return form(form.getSalaId(),form);
->>>>>>> b7034e0136a6d51477ade70c6e4966a88296e645
 		
 		Sessao sessao = form.toSessao(salaDao, filmeDao);
 		
 		List<Sessao> sessoesDaSala = sessaoDao.buscaSessoesDaSala(sessao.getSala());
-<<<<<<< HEAD
+
 		GerenciadorDeSessao gerenciador = new GerenciadorDeSessao(sessoesDaSala);
 		
 		if(gerenciador.cabe(sessao)){
@@ -74,18 +66,6 @@ public class SessaoController {
 		}
 		
 		return form(form.getSalaId(),form);
-		
-		
-=======
-		
-		GerenciadorDeSessao gerenciador = new GerenciadorDeSessao(sessoesDaSala);
-		
-		if(gerenciador.cabe(sessao)) {
-		sessaoDao.save(sessao);
-		return new ModelAndView("redirect:/admin/sala/" + form.getSalaId() + "/sessoes");
-		}
-		return form(form.getSalaId(),form);
->>>>>>> b7034e0136a6d51477ade70c6e4966a88296e645
 	}
 	
 }
